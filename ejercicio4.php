@@ -35,8 +35,11 @@ function obtenerValores(string $url) {
 
     return $valores;
 }
+$url = "";
+ if(isset($_POST["enviar"])){
+$url = $_POST["url"];
+ }
 
-$url = $_POST["url"] ?? "";
 $resultados = obtenerValores($url);
 
 $n = 1;

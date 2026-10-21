@@ -18,8 +18,8 @@ function viernesSi(int $mes, int $anio): bool
 }
 
 if (isset($_POST["enviar"])) {
-    $mes  = (int) ($_POST["mes"] ?? 0);
-    $anio = (int) ($_POST["anio"] ?? 0);
+    $mes  = (int) ($_POST["mes"]);
+    $anio = (int) ($_POST["anio"]);
 
     if ($mes < 1 || $mes > 12 || $anio < 1) {
         echo "<p>Ingresa un el mes y el año valido.</p>";
@@ -39,6 +39,5 @@ if (isset($_POST["enviar"])) {
         height: 200px;
         border-radius: 4px;
         padding-left: 125px;
-
     }
 </style>

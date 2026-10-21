@@ -15,10 +15,6 @@ function obtenerValores(string $url): array
     $valor = "";
     $activador = false;
     $letras = explode("&", $url);
-
-
-
-
     foreach ($letras as $letra) {
         $letras1 = explode("=", $letra);
         if (count($letras1) == 2) {
@@ -26,7 +22,13 @@ function obtenerValores(string $url): array
         }
     }
     return $valores;
+
+    
+    }
+    $url = "";
+    if(isset($_POST["enviar"])){
+        $url = $_POST["url"];
 }
 
-$resultado = obtenerValores($_POST["url"]);
+$resultado = obtenerValores("url") ;
 print_r($resultado);
